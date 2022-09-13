@@ -8,10 +8,11 @@ function amountBit() {
   let showResult = document.getElementById('show_result')
 
   if (!getPrice || !getDollar) {
+    showResult.innerHTML = 0
     return
   }
 
-  showResult.innerHTML = +getDollar % +getPrice
+  showResult.innerHTML = (+getDollar / +getPrice).toFixed(7)
 
   // clean the inputs:
   //   document.getElementById('get_price').value = ''

@@ -1,0 +1,11 @@
+.block {
+  display: block;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form_converter {
+  padding: 20px 20px 0px 20px;
+}
