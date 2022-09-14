@@ -5,7 +5,6 @@ resultBtn.addEventListener('click', amountBit)
 function amountBit() {
   let getPrice = document.getElementById('get_price').value
   let getDollar = document.getElementById('get_dollar').value
-  let note = document.getElementsByClassName('note')
   let showResult = document.getElementById('show_result')
 
   if (!getPrice || !getDollar) {
@@ -19,6 +18,15 @@ function amountBit() {
 
     showResult.innerHTML = 0
     alert('Input must be a number!')
+    return
+  }
+
+  if (+getPrice < 0 || +getDollar < 0) {
+    document.getElementById('get_price').value = ''
+    document.getElementById('get_dollar').value = ''
+
+    showResult.innerHTML = 0
+    alert('the entered number must be greater than zero!')
     return
   }
 
